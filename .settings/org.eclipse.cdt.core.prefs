@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+environment/project/0.123106509/IDF_PATH/delimiter=\:
+environment/project/0.123106509/IDF_PATH/operation=append
+environment/project/0.123106509/IDF_PATH/value=/Users/user/esp/esp-idf
+environment/project/0.123106509/PATH/delimiter=\:
+environment/project/0.123106509/PATH/operation=replace
+environment/project/0.123106509/PATH/value=/usr/bin\:/bin\:/usr/sbin\:/sbin\:{PATH}\:/Users/user/Downloads/xtensa-esp32-elf/bin
+environment/project/0.123106509/append=true
+environment/project/0.123106509/appendContributed=true
