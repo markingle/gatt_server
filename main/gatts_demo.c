@@ -497,6 +497,13 @@ static void gatts_profile_a_event_handler(esp_gatts_cb_event_t event, esp_gatt_i
         if (param->conf.status != ESP_GATT_OK){
             esp_log_buffer_hex(GATTS_TAG, param->conf.value, param->conf.len);
         }
+        uint8_t databundle[1];
+        for (int i = 0; i < sizeof(databundle); ++i)
+        		{
+        			databundle[i] = i%0xff;
+        		}
+        esp_ble_gatts_send_indicate(gatts_if, param->write.conn_id, gl_profile_tab[PROFILE_A_APP_ID].char_handle,
+                                                        sizeof(databundle), databundle, 0);
         break;
     case ESP_GATTS_OPEN_EVT:
     case ESP_GATTS_CANCEL_OPEN_EVT:
